@@ -1,0 +1,72 @@
+$blue: #0787EA;
+$gray: #333E48;
+$width: 3rem;
+$height: 1.5rem;
+$margin: 0.25rem;
+
+.CheckboxComponent {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+.switch {
+  position: relative;
+  min-width: $width;
+  width: $width;
+  height: $height;
+  margin-right: 0.5rem;
+  display: inline-block;
+
+    input {
+      display:none;
+
+      &:checked {
+        & + .slider {
+          background-color: $blue;
+
+          &:before {
+            transform: translateX($width - $height);
+          }
+        }
+      }
+      &:focus + .slider {
+        box-shadow: 0 0 1px $blue;
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: $width;
+      background-color: $gray;
+      transition: .4s;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: $height - 0.5rem;
+        width: $height - 0.5rem;
+        left: $margin;
+        bottom: $margin;
+        background-color: white;
+        transition: .4s;
+      }
+      &.disabled {
+        background-color:#ECEEEF;
+      }
+      &.round {
+        border-radius: $height + 0.5rem;
+
+        &:before {
+          border-radius: 50%;
+        }
+
+      }
+    }
+  }
+}

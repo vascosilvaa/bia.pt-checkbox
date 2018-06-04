@@ -1,0 +1,36 @@
+{
+  "name": "@bia.pt/checkbox",
+  "version": "0.1.3",
+  "description": "Checkbox React Component",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.11",
+    "prop-types": "^15.6.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^2.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": "bia.pt",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
+  },
+  "keywords": [
+    "react",
+    "checkbox",
+    "form",
+    "bia.pt",
+    "component"
+  ],
+  "license": "ISC"
+}
